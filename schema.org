@@ -1,0 +1,54 @@
+{
+   "@context":"https://schema.org",
+   "@graph":[
+      {
+         "@type":"Organization",
+         "@id":"https://example.com/#organization",
+         "name":"Yoast",
+         "url":"https://example.com/",
+         "sameAs":[
+            "https://www.facebook.com/yoast",
+            "https://www.linkedin.com/company/yoast-com/",
+            "https://en.wikipedia.org/wiki/Yoast",
+            "https://twitter.com/yoast"
+         ],
+         "logo":{
+            "@type":"ImageObject",
+            "@id":"https://example.com/#logo",
+            "url":"https://example.com/wp-content/uploads/2019/03/Yoast_Logo_tagline_Large_RGB.png",
+            "caption":"Yoast"
+         },
+         "image":{
+            "@id":"https://example.com/#logo"
+         }
+      },
+      {
+         "@type":"WebSite",
+         "@id":"https://example.com/#website",
+         "url":"https://example.com/",
+         "name":"one.wordpress.test",
+         "publisher":{
+            "@id":"https://example.com/#organization"
+         },
+         "potentialAction":{
+            "@type":"SearchAction",
+            "target":"https://example.com/?s={search_term_string}",
+            "query-input":"required name=search_term_string"
+         }
+      },
+      {
+         "@type":"WebPage",
+         "@id":"https://example.com/#webpage",
+         "url":"https://example.com/",
+         "inLanguage":"en-US",
+         "name":"one.wordpress.test - Just another WordPress site",
+         "isPartOf":{
+            "@id":"https://example.com/#website"
+         },
+         "about":{
+            "@id":"https://example.com/#organization"
+         },
+         "description":"Just another WordPress site"
+      }
+   ]
+}
